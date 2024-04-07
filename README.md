@@ -50,6 +50,8 @@ I have boxed all the codes in their specific functions,the setup function and lo
 
 
 here are the codes:
+<!-- --> 
+
 
 
 #include <Servo.h>
@@ -166,18 +168,18 @@ void WiFiConnect()
 
 void OLED_Init()
 {
-  oled.begin(SSD1306_SWITCHCAPVCC, 0x3C);     //"SSD1306_SWITCHCAPVCC"表示显示器为OLED ,"0x3C"为OLED屏幕默认通信地址
-  oled.setTextColor(WHITE);//开像素点发光
-  oled.clearDisplay();//清屏
+  oled.begin(SSD1306_SWITCHCAPVCC, 0x3C);     
+  oled.setTextColor(WHITE);
+  oled.clearDisplay();
   
 }
 
 void OLED_ShowString(uint8_t x, uint8_t y, uint8_t font_size, String string)
 {
-  oled.setTextSize(font_size);    //设置字体尺寸 (>=1)
-  oled.setCursor(x, y);           //设置显示坐标
-  oled.println(string);           //显示内容
-  oled.display();                 //开启显示
+  oled.setTextSize(font_size);    
+  oled.setCursor(x, y);          
+  oled.println(string);           
+  oled.display();                
 }
 
 void Tip(int i)
@@ -421,3 +423,6 @@ ButtonTotalController();
 
 }
 
+
+
+<!-- --> 
